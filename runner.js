@@ -9,6 +9,7 @@ const importChalk = async () => {
     process.exit(1);
   }
 };
+const render = require('./render');
 
 const forbiddenDirs = ['node_modules'];
 class Runner {
@@ -33,6 +34,9 @@ class Runner {
       );
 
       const beforeEaches = [];
+
+      global.render = render;
+
       global.beforeEach = (fn) => {
         beforeEaches.push(fn);
       };
