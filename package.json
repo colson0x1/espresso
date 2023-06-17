@@ -19,5 +19,8 @@
   "bin": {
     "esp": "index.js",
     "espresso": "index.js"
+  },
+  "dependencies": {
+    "chalk": "^5.2.0"
   }
 }
