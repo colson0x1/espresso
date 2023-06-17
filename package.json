@@ -1,0 +1,23 @@
+{
+  "name": "espresso",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colson0x1/espresso.git"
+  },
+  "author": "Colson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/colson0x1/espresso/issues"
+  },
+  "homepage": "https://github.com/colson0x1/espresso#readme",
+  "bin": {
+    "esp": "index.js",
+    "espresso": "index.js"
+  }
+}
