@@ -41,10 +41,10 @@ class Runner {
         beforeEaches.push(fn);
       };
 
-      global.it = (desc, fn) => {
+      global.it = async (desc, fn) => {
         beforeEaches.forEach((func) => func());
         try {
-          fn();
+          await fn();
           console.log(
             testSuccess(`\t(✔) ${chalk.bold('Test Passed')} - ${desc}`)
           );
