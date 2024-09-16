@@ -21,14 +21,18 @@ A lightweight testing framework for JavaScript applications (CLI + Web).
 To install `cols-espresso` as a dependency on the machine, run:
 
 ```bash
-sudo npm install -g cols-espresso
+$ sudo npm install -g cols-espresso
 ```
 
 ## Usage
 
 Once installed, you can add tests to your project by creating `.test.js` files. To run these tests, simply invoke the `espresso` command in your project root.
 
-`$ espresso`
+```shell
+$ espresso
+OR
+$ esp
+```
 
 ### Writing a Test
 
