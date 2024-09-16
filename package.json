@@ -1,10 +1,22 @@
 {
   "name": "cols-espresso",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.3",
+  "description": "A lightweight testing framework for JavaScript applications (CLI + Web).",
+  "engines": {
+    "node": "22.8.0"
+  },
   "main": "index.js",
+  "files": [
+    "index.js",
+    "runner.js",
+    "render.js",
+    "testFn/",
+    "testWeb/"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "del ./build/*",
+    "build": "npm run clean",
+    "test": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +35,15 @@
   "dependencies": {
     "chalk": "^5.2.0",
     "jsdom": "^22.1.0"
-  }
+  },
+  "devDependencies": {
+    "del-cli": "^5.1.0"
+  },
+  "keywords": [
+    "espresso",
+    "cols-espresso",
+    "testing",
+    "test runner",
+    "js testing"
+  ]
 }
