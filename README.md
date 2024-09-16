@@ -1,100 +1,129 @@
-# Espresso
+# Espresso (npm: cols-espresso)
 
 A lightweight testing framework for JavaScript applications (CLI + Web).
 
 ## Description
 
-Espresso is a simple and intuitive testing framework designed for JavaScript applications. It allows you to write and execute tests with ease, providing clear feedback on test results. With Espresso, you can ensure the quality and reliability of your codebase by easily running tests and validating expected behaviors.
+**Espresso (cols-espresso)** is a minimal and intuitive, powerful JavaScript testing framework built from scratch. It provides an easy way to write and run tests in your JavaScript projects with zero configuration, offering a simple syntax inspired by popular testing frameworks. This library is designed to keep the testing process lean and efficient while adding a bit of style to your console output.
 
 ![espresso - testFn passed the test](https://i.imgur.com/3IlcU7N.png)
 
-## Features
+### Key Features
 
-- Support for running tests across multiple files
-- BeforeEach and afterEach hooks for test setup and teardown
-- Colorful and formatted console output for test results
-- Support for testing browser-based JavaScript using jsdom
-- Integration with Chalk library for customizable and stylized output
+- Simple syntax for writing tests with `it` and `beforeEach`.
+- Colorful and expressive test output using `chalk`.
+- Supports both DOM-based tests (via `jsdom`) and regular function tests.
+- Lightweight and minimal dependencies.
+- Flexible enough to integrate into any project.
 
 ## Installation
 
-To use Espresso in your project, follow these steps:
+To install `cols-espresso` as a dependency on the machine, run:
 
-1. Clone the Espresso repository:
-
-   ```bash
-   git clone https://github.com/colson0x1/espresso.git
-   ```
-
-2. Navigate to the project directory:
-
-   ```bash
-   cd espresso
-   ```
-
-3. Install the dependencies:
-
-   ```bash
-   npm install
-   ```
-
-## Alias
-
-You can use the alias `esp` for `espresso`.
-
+```bash
+sudo npm install -g cols-espresso
+```
 
 ## Usage
 
-To run the tests using Espresso, follow these steps:
+Once installed, you can add tests to your project by creating `.test.js` files. To run these tests, simply invoke the `espresso` command in your project root.
 
-1. Open a terminal and navigate to the Espresso project directory.
+`$ espresso`
 
-2. Run the tests:
+### Writing a Test
 
-   ```bash
-   esp
-   ```
-
-   This command will execute all the test files in the project and display the results in the console.
-
-## Test Structure
-
-Espresso follows a simple test structure that consists of test files containing individual test cases. Each test case is defined using the `it` function and should encapsulate a specific behavior or functionality to be tested.
-
-Here's an example of a test case:
+Here's an example of a test using `cols-espresso`:
 
 ```javascript
-it('should sum an array', () => {
-  // Test logic goes here
+const assert = require('assert');
+
+let numbers;
+beforeEach(() => {
+  numbers = [2, 4, 6, 8];
+});
+
+it('should return thrice the array', () => {
+  const result = numbers.map((value) => value * 3);
+  assert.deepStrictEqual(result, [6, 12, 18, 24]);
 });
 ```
 
-Within the test case, you can use assertion libraries like `assert` to validate the expected behavior of your code.
+### Running Tests
 
-## Contributing
+Once you've written your tests in files that end with `.test.js`, run the following command from the root of your project to execute all tests:
 
-Contributions to Espresso are welcome! If you encounter any issues, have suggestions, or would like to contribute code improvements, please create an issue or submit a pull request on the [Espresso GitHub repository](https://github.com/colson0x1/espresso).
+```bash
+espresso
+```
+
+You’ll see a colorful output that provides clear feedback about passed or failed tests.
+
+### Example Test Output
+
+```bash
+Running ESPRESSO 🔥 on map.test.js
+  ✔ Test Passed - should return thrice the array
+  ✔ Test Passed - beforeEach is ran each time
+
+Running ESPRESSO 🔥 on forEach.test.js
+  ✔ Test Passed - should sum an array
+  ✔ Test Passed - beforeEach is ran each time
+```
+
+### DOM Testing Example
+
+With `cols-espresso`, you can also write DOM tests using `jsdom`:
+
+```javascript
+const assert = require('assert');
+const render = require('./render'); // Assuming you have a render function
+
+it('has a text input', async () => {
+  const dom = await render('index.html');
+  const input = dom.window.document.querySelector('input');
+  assert(input);
+});
+
+it('shows a success message with a valid email', async () => {
+  const dom = await render('index.html');
+  const input = dom.window.document.querySelector('input');
+  input.value = 'test@domain.com';
+
+  dom.window.document
+    .querySelector('form')
+    .dispatchEvent(new dom.window.Event('submit'));
+
+  const h1 = dom.window.document.querySelector('h1');
+  assert.strictEqual(h1.innerHTML, 'AWESOME 🔥');
+});
+```
+
+---
 
 ## License
 
-The Espresso project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+The Espresso project is licensed under the MIT License. See the [[LICENSE]](LICENSE) file for more information.
 
 ---
 
 ## Screenshoots
 
 ### espresso - testFn fails the test
+
 ![espresso - testFn fails the test](https://i.imgur.com/UiXilhr.png)
 
 ### espresso - testFn passed the test
+
 ![espresso - testFn passed the test](https://i.imgur.com/3IlcU7N.png)
 
 ### espresso - testWeb failed the test returning different message upon correct email
+
 ![espresso - testWeb failed the test returning different message upon submit than expected](https://i.imgur.com/4rdBu9L.png)
 
 ### espresso - testWeb failed the test returning different message upon incorrect email
+
 ![espresso - testWeb failed the test returning different message upon incorrect email](https://i.imgur.com/ALaMVUe.png)
 
 ## espresso - testWeb passed the test
-![espresso - testWeb passed the test](https://i.imgur.com/q6dBlI9.png)
 
+![espresso - testWeb passed the test](https://i.imgur.com/q6dBlI9.png)
