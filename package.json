@@ -1,9 +1,9 @@
 {
-  "name": "cols-espresso",
-  "version": "1.0.4",
-  "description": "Espresso - A lightweight testing framework for JavaScript applications (CLI + Web).",
+  "name": "espresso-runner",
+  "version": "1.0.0",
+  "description": "Espresso Runner is a lightweight testing framework for JavaScript applications (CLI + Web).",
   "engines": {
-    "node": "22.8.0"
+    "node": ">=18.20.4"
   },
   "main": "index.js",
   "files": [
