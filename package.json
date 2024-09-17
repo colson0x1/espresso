@@ -1,6 +1,6 @@
 {
   "name": "espresso-runner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Espresso is a lightweight testing framework for JavaScript applications (CLI + Web).",
   "engines": {
     "node": ">=18.20.4"
@@ -41,10 +41,30 @@
   },
   "keywords": [
     "espresso",
-    "espressor runner",
+    "espresso runner",
     "cols-espresso",
     "testing",
     "test runner",
-    "js testing"
+    "js testing",
+    "javascript testing",
+    "unit testing",
+    "integration testing",
+    "e2e testing",
+    "test framework",
+    "TDD",
+    "BDD",
+    "test automation",
+    "test CLI",
+    "test execution",
+    "test suite",
+    "async testing",
+    "lightweight testing",
+    "mocking",
+    "code coverage",
+    "test runner framework",
+    "js test runner",
+    "nodejs testing",
+    "web testing",
+    "cross-platform testing"
   ]
 }
