@@ -1,6 +1,6 @@
 {
   "name": "espresso-runner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Espresso Runner is a lightweight testing framework for JavaScript applications (CLI + Web).",
   "engines": {
     "node": ">=18.20.4"
@@ -41,6 +41,7 @@
   },
   "keywords": [
     "espresso",
+    "espressor runner",
     "cols-espresso",
     "testing",
     "test runner",
