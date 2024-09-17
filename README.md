@@ -1,10 +1,10 @@
-# Espresso Runner (espresso-runner npm)
+# Espresso (espresso-runner npm)
 
 A lightweight testing framework for JavaScript applications (CLI + Web).
 
 ## Description
 
-**Espresso Runner** is a minimal and intuitive, powerful JavaScript testing framework built from scratch. It provides an easy way to write and run tests in your JavaScript projects with zero configuration, offering a simple syntax inspired by popular testing frameworks. This library is designed to keep the testing process lean and efficient while adding a bit of style to your console output.
+**Espresso** is a minimal and intuitive, powerful JavaScript testing framework built from scratch. It provides an easy way to write and run tests in your JavaScript projects with zero configuration, offering a simple syntax inspired by popular testing frameworks. This library is designed to keep the testing process lean and efficient while adding a bit of style to your console output.
 
 ![espresso runner - testFn passed the test](https://i.imgur.com/3IlcU7N.png)
 
