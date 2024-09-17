@@ -1,12 +1,12 @@
-# Espresso (npm: cols-espresso)
+# Espresso Runner (espresso-runner npm)
 
 A lightweight testing framework for JavaScript applications (CLI + Web).
 
 ## Description
 
-**Espresso (cols-espresso)** is a minimal and intuitive, powerful JavaScript testing framework built from scratch. It provides an easy way to write and run tests in your JavaScript projects with zero configuration, offering a simple syntax inspired by popular testing frameworks. This library is designed to keep the testing process lean and efficient while adding a bit of style to your console output.
+**Espresso Runner** is a minimal and intuitive, powerful JavaScript testing framework built from scratch. It provides an easy way to write and run tests in your JavaScript projects with zero configuration, offering a simple syntax inspired by popular testing frameworks. This library is designed to keep the testing process lean and efficient while adding a bit of style to your console output.
 
-![espresso - testFn passed the test](https://i.imgur.com/3IlcU7N.png)
+![espresso runner - testFn passed the test](https://i.imgur.com/3IlcU7N.png)
 
 ### Key Features
 
@@ -21,7 +21,7 @@ A lightweight testing framework for JavaScript applications (CLI + Web).
 To install `cols-espresso` as a dependency on the machine, run:
 
 ```bash
-$ sudo npm install -g cols-espresso
+$ sudo npm install -g espresso-runner
 ```
 
 ## Usage
@@ -112,22 +112,22 @@ The Espresso project is licensed under the MIT License. See the [[LICENSE]](LICE
 
 ## Screenshoots
 
-### espresso - testFn fails the test
+### espresso runner - testFn fails the test
 
 ![espresso - testFn fails the test](https://i.imgur.com/UiXilhr.png)
 
-### espresso - testFn passed the test
+### espresso runner - testFn passed the test
 
 ![espresso - testFn passed the test](https://i.imgur.com/3IlcU7N.png)
 
-### espresso - testWeb failed the test returning different message upon correct email
+### espresso runner - testWeb failed the test returning different message upon correct email
 
 ![espresso - testWeb failed the test returning different message upon submit than expected](https://i.imgur.com/4rdBu9L.png)
 
-### espresso - testWeb failed the test returning different message upon incorrect email
+### espresso runner - testWeb failed the test returning different message upon incorrect email
 
 ![espresso - testWeb failed the test returning different message upon incorrect email](https://i.imgur.com/ALaMVUe.png)
 
-## espresso - testWeb passed the test
+## espresso runner - testWeb passed the test
 
 ![espresso - testWeb passed the test](https://i.imgur.com/q6dBlI9.png)
